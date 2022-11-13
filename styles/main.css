@@ -120,7 +120,7 @@ body{
     width: 100%;
 }
 
-.btn-submit:hover{
+.btn-submit:hover, .btn-submit:active{
     background-color: hsl(158, 36%, 25%) ;
 }
 
