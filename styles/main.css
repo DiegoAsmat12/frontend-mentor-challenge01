@@ -1,0 +1,145 @@
+*,::after,::before{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+:root{
+    /* Primary */
+    --dark-cyan:hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    /* Neutral */
+    --dark-blue: hsl(212, 21%, 14%);
+    --dark-gblue: hsl(228, 12%, 48%);
+
+}
+
+body{
+    background-color: var(--cream);
+    display: grid;
+    place-self: center;
+    width: 100%;
+    height: 100vh;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-container{
+    background-color: white;
+    width: 80%;
+    min-width: 375px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    border: 0.1 solid rgb(226, 226, 226);
+    border-radius: 0.8rem;
+    overflow: hidden;
+    height: 600px;
+}
+
+.card-image{
+    height: 40%;
+    background: url("../images/image-product-mobile.jpg") no-repeat 0 0;
+    background-size: 100%;
+}
+
+.card-info{
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    line-height: 1.5;
+    letter-spacing: 0.03rem;
+}
+
+.sub-title{
+    letter-spacing: 0.25rem;
+    font-weight: 500;
+}
+
+.title{
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.2;
+    color:var(--dark-blue);
+}
+
+.card-content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-weight: 500;
+    flex: 1;
+}
+
+.btn{
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.btn-submit{
+    background-color: var(--dark-cyan);
+    color: white;
+}
+
+.lgrey{
+    color: var(--dark-gblue);
+}
+
+.card-pricing{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.default-price{
+    text-decoration: line-through;
+}
+
+
+.main-price{
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--dark-cyan);
+}
+
+.w-100{
+    width: 100%;
+}
+
+
+
+@media only screen and (min-width:800px) {
+    
+    .card-container{
+        flex-direction: row;
+        max-width: 600px;
+        height: 400px;
+    }
+
+    .card-image{
+        background: url("../images/image-product-desktop.jpg") no-repeat 0 0;
+        height: 100%;
+        flex: 1;
+        background-size: 100%;
+    }
+
+    .card-info{
+        letter-spacing: 0.09rem;
+    }
+
+
+}
